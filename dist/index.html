@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-slate-900 mb-12 p-10 ">
+
+
+    <!-- Header section goes here -->
+    <header class="mx-auto max-w-screen-lg px-3 py-6 h-14 flex justify-between items-center">
+        <div class="font-bold text-cyan-400 text-2xl">Hemant's Portfolio</div>
+        <nav class="hidden md:block">
+            <ul class="text-gray-200 flex gap-3 ">
+                <li><a class="hover:text-white cursor-pointer" href="#">About</a></li>
+                <li><a class="hover:text-white cursor-pointer" href="#">Blog</a></li>
+                <li><a class="hover:text-white cursor-pointer" href="#">Portfolio</a></li>
+            </ul>
+        </nav>
+
+        <nav x-data="{ open: false }" class="md:hidden">
+            <button class="text-white w-10 h-10 relative focus:outline-none" @click="open = !open">
+                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                    <span aria-hidden="true"
+                        class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                        :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                    <span aria-hidden="true"
+                        class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
+                        :class="{'opacity-0': open } "></span>
+                    <span aria-hidden="true"
+                        class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                        :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                </div>
+            </button>
+        </nav>
+
+    </header>
+    <!--Header section ends here-->
+
+
+    <!-- Hero Section starts-->
+    <div
+        class="text-white mx-auto max-w-screen-lg px-3 py-6 flex flex-col gap-4 items-center md:flex-row md:justify-between md:gap-10">
+        <div class="">
+            <h2 class="text-3xl font-bold mb-6 ">Hi there, I'm <span class="text-cyan-400">Hemant 👋</span></h2>
+            <p class="leading-8 text-lg break-words"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                malesuada nisi tellus, non
+                imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore.</p>
+            <div class="flex gap-3 mt-3">
+                <a href="#">
+                    <img class="w-12 h-12 hover:translate-y-1"
+                        src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/twitter-icon.png"
+                        alt="twitter icon">
+                </a>
+                <a href="#">
+                    <img class="w-12 h-12 hover:translate-y-1"
+                        src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/linkedin-icon.png"
+                        alt="twitter icon">
+                </a>
+                <a href="#">
+                    <img class="w-12 h-12 hover:translate-y-1"
+                        src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/youtube-icon.png"
+                        alt="twitter icon">
+                </a>
+                <a href="#">
+                    <img class="w-12 h-12 hover:translate-y-1"
+                        src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/facebook-icon.png"
+                        alt="twitter icon">
+                </a>
+            </div>
+        </div>
+        <div class="shrink-0">
+            <img class="w-64 h-80 " src="./../images/profile.svg" alt="">
+        </div>
+    </div>
+    <!-- Hero Section ends here-->
+
+    <!--Projects Section-->
+    <div class="mx-auto max-w-screen-lg px-3 py-6 flex flex-col gap-4">
+        <h2 class="text-white font-bold text-2xl">Recent <span class="text-cyan-400">Projects</span></h2>
+        <div
+            class="bg-slate-800 rounded-xl shadow-md p-4 flex flex-col gap-2 md:gap-4 justify-center items-center md:flex-row md:justify-between">
+            <img class="w-36 h-36 hover:translate-y-1"
+                src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/project-web-design.png"
+                alt="">
+            <div>
+                <div class="flex flex-col md:flex-row items-center gap-2">
+                    <p><a class="text-white text-lg font-semibold hover:text-cyan-400" href="">Project 1</a></p>
+                    <div class="flex gap-[6px]">
+                        <span
+                            class="bg-fuchsia-400 inline-block rounded-md px-2 py-1 text-xs font-semibold">React</span>
+                        <span
+                            class="bg-lime-400  inline-block rounded-md px-2 py-1 text-xs font-semibold">Javascript</span>
+                        <span
+                            class="bg-sky-400 inline-block rounded-md px-2 py-1 text-xs font-semibold">TailWind-CSS</span>
+                        <span
+                            class="bg-rose-400 inline-block rounded-md px-2 py-1 text-xs font-semibold">Firebase</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                    bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
+            </div>
+        </div>
+
+        <div
+            class="bg-slate-800 rounded-xl shadow-md p-4 flex flex-col gap-2 md:gap-4 justify-center items-center md:flex-row md:justify-between">
+            <img class="w-36 h-36 hover:translate-y-1"
+                src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/project-fire.png" alt="">
+            <div>
+                <div class="flex flex-col md:flex-row items-center gap-2">
+                    <p><a class="text-white text-lg font-semibold hover:text-cyan-400" href="">Project 2</a></p>
+                    <div class="flex gap-[6px]">
+                        <span
+                            class="bg-violet-400  inline-block rounded-md px-2 py-1 text-xs font-semibold">React</span>
+                        <span
+                            class="bg-emerald-400  inline-block rounded-md px-2 py-1 text-xs font-semibold">Javascript</span>
+                        <span
+                            class="bg-yellow-400  inline-block rounded-md px-2 py-1 text-xs font-semibold">TailWind-CSS</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                    bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
+            </div>
+        </div>
+
+        <div
+            class="bg-slate-800 rounded-xl shadow-md p-4 flex flex-col gap-2 md:gap-4 justify-center items-center md:flex-row md:justify-between">
+            <img class="w-36 h-36 hover:translate-y-1"
+                src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/project-maps.png" alt="">
+            <div>
+                <div class="flex flex-col md:flex-row items-center gap-2">
+                    <p><a class="text-white text-lg font-semibold hover:text-cyan-400" href="">Project 3</a></p>
+                    <div class="flex gap-[6px]">
+                        <span
+                            class="bg-fuchsia-400 inline-block rounded-md px-2 py-1 text-xs font-semibold">React</span>
+                        <span
+                            class="bg-lime-400  inline-block rounded-md px-2 py-1 text-xs font-semibold">Javascript</span>
+                        <span
+                            class="bg-sky-400 inline-block rounded-md px-2 py-1 text-xs font-semibold">TailWind-CSS</span>
+                        <span
+                            class="bg-rose-400  inline-block rounded-md px-2 py-1 text-xs font-semibold">Firebase</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                    bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
+            </div>
+        </div>
+    </div>
+    <!--Project Section ends here  -->
+
+    <!--Recent Posts -->
+    <div class="mx-auto max-w-screen-lg px-3 py-6 flex flex-col gap-4">
+        <div class="flex justify-between items-center">
+            <h2 class="text-white font-bold text-2xl">Recent <span class="text-cyan-400">Posts</span></h2>
+            <p><a class="text-white text-sm font-semibold" href="#">View all Posts →</a></p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-6">
+            <a class="hover:translate-y-1 text-blue-400" href="#">
+                <div class="bg-slate-800 rounded-xl overflow-hidden text-white ">
+                    <div class="aspect-w-3 aspect-h-2">
+                        <img class="h-full w-full object-cover object-center"
+                            src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/image-post3.jpeg"
+                            alt="recent posts" loading="lazy">
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                        <h4 class="text-lg font-semibold">5th Lorem ipsum dolor sit</h4>
+                        <span class="text-xs text-gray-400 mt-1">Feb 4, 2020</span>
+                        <p class="text-sm mt-2 text-center"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Accusantium
+                            sequi molestiae ullam.</p>
+                    </div>
+                </div>
+            </a>
+            <a class="hover:translate-y-1 text-blue-400" href="#">
+                <div class="bg-slate-800 rounded-xl overflow-hidden text-white ">
+                    <div class="aspect-w-3 aspect-h-2">
+                        <img class="h-full w-full object-cover object-center"
+                            src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/image-post2.jpeg"
+                            alt="recent posts" loading="lazy">
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                        <h4 class="text-lg font-semibold">Typography example</h4>
+                        <span class="text-xs text-gray-400 mt-1">August 8,2023</span>
+                        <p class="text-sm mt-2 text-center"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Accusantium
+                            sequi molestiae ullam.</p>
+                    </div>
+                </div>
+            </a>
+            <a class="hover:translate-y-1 text-blue-400" href="#">
+                <div class="bg-slate-800 rounded-xl overflow-hidden text-white ">
+                    <div class="aspect-w-3 aspect-h-2">
+                        <img class="h-full w-full object-cover object-center"
+                            src="https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/image-post3.jpeg"
+                            alt="recent posts" loading="lazy">
+                    </div>
+                    <div class="flex flex-col items-center p-4">
+                        <h4 class="text-lg font-semibold">4th Lorem ipsum dolor sit</h4>
+                        <span class="text-xs text-gray-400 mt-1">Feb 4, 2020</span>
+                        <p class="text-sm mt-2 text-center"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Accusantium
+                            sequi molestiae ullam.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--Recent Posts ends here-->
+
+
+    <!-- Footer Section-->
+    <div class="mx-auto max-w-screen-lg px-3 py-6">
+
+        <div class="border-t border-gray-600 pt-5">
+            <div class="text-sm text-gray-200">© Copyright <!-- -->2022<!-- --> by <!-- -->Hemant<!-- -->.
+                Built with ♥ by <a class="text-cyan-400 hover:underline" href="#"
+                    target="_blank">Hemant</a>.</div>
+        </div>
+    </div>
+
+
+    <!--Footer Section ends here-->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</body>
+z
+</html>
