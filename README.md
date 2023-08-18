@@ -1,2 +1,2 @@
 # TailWindPractice
-Created a PWSkills home page for practicing Tailwind css
+Created a html Portfolio  page for practicing Tailwind css
